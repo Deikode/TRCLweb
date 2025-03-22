@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+			<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="css.css"> 
+	
+	
+	
+	
+		<style>
+		blockquote{font-family: sans-serif;
+			font-weight: 400;
+			text-align: justify;
+			 display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+			text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+		}
+		
+		p {
+    text-indent: 50px;
+    text-align:inherit;
+    letter-spacing: 3px;
+}
+		
+		h2 {
+			font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4CAF50;
+		}
+			
+			
+			/*para menu responsive */
+			body {
+				margin= 0;
+				font-family: sans-serif;
+			} 
+			header {
+				width: 100%;
+				background: #000;
+			}
+			/* esconder checkbox que es btn menu */
+			#btn-menu {
+				display: none;
+			}
+			header label{
+				display: none;
+				width: 30px;
+				height: 30px;
+				padding: 10px;
+				border-right: 1px solid #fff; 
+			}
+			header label:hover{
+				cursor: pointer;
+				background: rgba(0,0,0,0.3);
+			} 		
+			.menu ul {
+				margin:0;
+				list-style: none;
+				padding: 0;
+				display: flex;
+		
+			}
+		
+			.menu li {
+					border-right: 1px solid #fff;
+				
+			}
+			
+			.menu li:hover {
+				background: rgba(0,0,0,0.3);
+			}
+			
+			.menu li a{
+				display: block;
+				padding: 15px 20px;
+				color: #fff;
+				text-decoration: none;
+				
+			}
+			
+			
+			main {
+				padding: : 20px;
+			}
+			
+			@media (max-width:768px){
+				header label{
+					display: block;
+				} 
+				.menu{
+					position: absolute;
+					background: #000;
+					width: 70%;
+					margin-left: -80%;
+					transition: all 0.5s;
+				}
+				
+				.menu ul {
+					flex-direction: column;
+				}
+				
+				.menu li {
+					border-top: 1px solid #000;
+				}
+			
+				#btn-menu:checked ~ .menu {
+				
+					margin: 0;
+					
+				}
+			}
+			 /*fin menu responsive*/
+			
+			/*para linea*/
+			hr {border: 0; height: 0; box-shadow: 0 1px 5px 1px black;}
+			
+			/* pra dropdown de la derecha*/
+			.dropbtn {
+    background-color: #000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:firebrick;
+}
+			
+			
+			
+	</style>
+
+    
+    <!-- para  bootstrap  -->
+    
+   
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	
+	
+	
+	
+	
+
+	
+	
+	
+    
+    <!-- .GIF para  FAVICON -->
+    <link rel="shortcut icon" href="img/finger-clipart-rock-and-roll-2.ico" type="image/x-icon" />
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- para  bootstrap  -->
+---
+	
+	
+
+
+	
+---
+    <header>
+
+        <h1>H&nbsp; I &nbsp; S &nbsp; T &nbsp; O &nbsp; R &nbsp; I &nbsp; A &nbsp; &nbsp;  D E L &nbsp; &nbsp; G  &nbsp; R &nbsp;  U &nbsp; N  &nbsp; G &nbsp; E &nbsp;   </h1>
+            <div>
+
+
+   
+                	<div class="logo">
+						<a href="https://www.aliceinchains.com">
+                       <img src="img/aliceLOGOsolo.png" alt="Ir al sitio de Alice in Chains" title="Ir al sitio de Alice in Chains" style="width:20%;"/>
+                        </a>
+							<a href="http://www.nirvana.com">
+                       <img src="img/nirvanaLOGOsolo.png"   alt="Ir al sitio de Nirvana" title="Ir al sitio de Nirvana" style="width:20%;"/>
+                        </a>
+							<a href="https://pearljam.com/">
+                       <img src="img/PearlJamLOGOsolo.png"  alt="Ir al sitio de Pearl Jam" title="Ir al sitio de Pearl Jam"  style="width:20%;" alt="Ir al sitio de "/>
+                        </a>
+							<a href="http://www.soundgardenworld.com">
+                       <img src="img/soundgardeLOGOsolo.png"   alt="Ir al sitio de Soundgarden" title="Ir al sitio de Soundgarden" style="width:20%;"/>
+                        </a>
+                	</div>
+                    
+
+
+        	</div>
+		
+		
+		<!-- para menu responsive-->
+		
+		<input type="checkbox" id="btn-menu">
+			
+			<label for="btn-menu"><img src="menu_80607.png" alt="">
+			</label>
+			<nav class="menu">
+				<ul>
+					<li><a href="">Menú</a></li>
+					<li><a href="galeriaimagenes.html">Galeria de Imagenes</a></li>
+					<li><a href="tabla.html">Grupos Grunge</a>
+					</li>
+					<li><a href="formulario.html">Formulario</a></li>
+					<li><a href="mapalogo.html">Mapalogo</a></li>
+					<li><a href="indexFRAME.html">Sitios Oficiales de los grupos</a></li>
+					
+
+					
+				
+				
+	 <li >
+    <a href="http://www.google.es" class="w3-padding-large w3-hover-red w3-hide-small w3-right" alt="Buscador Google" title="Buscador Google" ><i class="fa fa-search"></i></a>
+					</li>
+					
+						
+					<li>
+					
+					</li>
+				</ul>
+			</nav>
+		
+		
+	
+		
+		<!-- -->
+    </header>
+
+
+    
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+
+  
+     
+    
+
+
+	
+	  
+	  	  
+	    
+
+ </div>
+	
+		
+	
+</div>
+	
+	</div>
+<!-- barra de menu en pantallas pequeñas -->
+
+	
+	
+	
+	
+	
+	
+	
+	<a name="Ancla" id="a"></a>
+
+
+	
+	
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Introdución</h2>
+		
+		<hr/>
+		<br>
+     
+	  
+	  
+      <div class="imgrock1" style="height:500px;">
+
+
+
+
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Gj7a8dZB_5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          </div>
+      
+      <blockquote>El grunge, en ocasiones conocido como sonido de Seattle, es un subgénero del rock alternativo influido por el punk, el hardcore punk, el noise rock, el hard rock y con estructuras cercanas al rock clásico. Surgió a finales de la década de los ochenta, con grupos provenientes principalmente del estado norteamericano de Washington, en particular, del área de Seattle. La primera compañía que impulsó y dio a conocer el género fue la discográfica Sub Pop, apoyando a bandas que serían fundamentales en el desarrollo del naciente género, como Nirvana, Green River o Soundgarden. Las características distintivas del sonido grunge eran sus guitarras fuertemente distorsionadas y enérgicas, melodías vocales guturales, muchas veces pegadizas y repetitivas, así como baterías predominantes; mientras sus letras se caracterizaban por reflejar apatía y desencanto. Las canciones primerizas y más agresivas del género estuvieron influenciadas por el Sludge metal.</blockquote>
+        <blockquote>
+        El grunge se expandió a nivel mundial durante la primera mitad de la década de los noventa, impulsado principalmente por el éxito comercial de los álbumes Nevermind de Nirvana y Ten de Pearl Jam. Dicho éxito catapultó la popularidad del rock alternativo e hizo del grunge el género de hard rock más popular de ese tiempo. A pesar de esto, muchos grupos estuvieron siempre incómodos con su estatus de superestrellas y por la aparición, a causa de la influencia de los medios, de un movimiento grunge, lo que en algunos casos les provocaron conflictos internos que los llevaron desde la separación hasta la muerte de algunos de sus integrantes.</blockquote>
+
+    </div>
+      
+	  <a href="#Ancla">Ir arriba</a>
+
+
+             <div class="card">
+   
+      <h2>Origen del término</h2>
+				 
+				 
+				 	<hr/>
+		<br>
+				 
+				 
+				 
+      <div> <img src="img/concert.jpg" style="width:100%;"/></div>
+      <blockquote>Se cree que el término "grunge" proviene de una pronunciación relajada del adjetivo "grungy" (jerga usada en inglés para decir "sucio"), el cual se originó como jerga de los términos en inglés "dirt" ("suciedad", "mugre") o "filth" ("inmundicia", "porquería").
+
+    Generalmente se acredita a Mark Arm, entonces vocalista del grupo Green River y posteriormente de Mudhoney, como la primera persona que utilizó el término "grunge", refiriéndose a un nuevo estilo musical. Arm usó la palabra en 1981 en una carta que escribió y envió bajo su nombre de pila, Mark McLaughlin, a la revista de Seattle Desperate Times, en la que criticaba a su anterior banda Mr. Epp and the Calculations, llamándola "Pure grunge! Pure white noise! Pure shit!" ("¡Grunge puro! ¡Puro ruido de fondo!, ¡Mandanga de la buena!").</blockquote>
+    </div>
+        <a href="#Ancla">Ir arriba</a>
+             <div class="card">
+      
+      <h2>Características</h2>
+				 	<hr/>
+		<br>
+      <div> <img src="img/jump.jpg" style="width:100%;"/></div>
+      <blockquote>Como género musical, se caracteriza por las guitarras distorsionadas, melodías repetitivas, y batería pesada de herencia punk y heavy metal, siendo más complejo que el punk en sus melodías pero sin la pesadez del metal. Varios sellos musicales independientes fueron los que permitieron llevar este estilo de música al público en sus inicios. Muchas de las bandas más exitosas de la época fueron asociadas con la compañía discográfica independiente Sub Pop de Seattle; sin embargo, otros sellos independientes de dicha ciudad también ganaron reconocimiento, incluyendo Kill Rock Stars y K Records. El ejecutivo David Geffen también tuvo un papel importante en la comercialización del grunge.
+
+        La escena grunge tuvo también fuertes influencias de la cultura musical del noroeste de Estados Unidos y de la cultura juvenil local. El parecido a otras bandas de la misma procedencia, como The Fabulous Wailers y, más particularmente, The Sonics, es notorio.
+
+        Las letras del grunge destacan por su desencanto y apatía y por tratar temas como la alienación, la búsqueda de la libertad o la marginación social. A través de estos temas, los músicos del género mostraban su disconformidad con la sociedad y con los variados prejuicios de ésta, lo que los aproximaba tanto al punk como a la generación X. 
+</blockquote>
+    </div>
+      
+    
+      
+      
+      
+      
+      
+      
+        <a href="#Ancla">Ir arriba</a>
+    <div class="card">
+      
+      <h2>Raices e Influencias</h2>
+		
+			<hr/>
+		<br>
+      <div> <img src="img/kurtoverhand.jpg" style="width:100%;"/></div>
+      <blockquote>La acogida masiva del grunge por parte de la audiencia se consideró como una reacción contra el dominio popular del glam metal, representado por bandas como Poison, Motley Crüe, Ratt o Bon Jovi, que había estado dominando las listas de éxitos musicales, especialmente en los Estados Unidos, durante la década de los ochenta. La temática de las canciones grunge contrasta con las letras machistas del hair metal, ya que posee mayor sensibilidad y una marcada conciencia social. Mientras que en el glam Metal las letras hacían referencia en general a logros sexuales o haciendo alarde del consumo de drogas y alcohol.</blockquote>
+      <blockquote>El sonido tan particular del grunge se debió en parte al aislamiento que tuvo Seattle de otras escenas musicales. Jonathan Poneman de la discográfica Sub Pop comentó: "Seattle fue el ejemplo perfecto de una ciudad secundaria con una escena musical muy activa que fue ignorada por completo por la fijación de los medios estadounidenses en Los Ángeles o Nueva York". Mark Arm replicaba que dicho aislamiento significaba: "Esta esquina del mapa estaba por naturaleza apartada de las ideas de otros". El grunge evolucionó desde la escena punk local y tuvo como fuentes principales de inspiración a bandas como The Fartz, The U-Men, 10 Minute Warning, The Accüsed y The Fastbacks. También el estilo lento, pesado y sucio de The Melvins fue una de las influencias más significativas del sonido grunge.
+
+        </blockquote>
+    </div>
+      
+
+       <a href="#Ancla">Ir arriba</a> 
+    <div class="card">
+      
+      <h2>Desarrollo, explosión y éxito comercial </h2>
+		
+			<hr/>
+		<br>
+       <div> <img src="img/in_utero_concert.jpg" style="width:100%;"/></div>
+        <blockquote> El álbum recopilatorio Deep Six, lanzado en 1986 por la compañía discográfica C/Z Records, más tarde rebautizada como A&M, es uno de los primeros álbumes del género. La grabación incluía varias canciones de seis grupos: Green River, Soundgarden, The Melvins, Malfunkshun, Skin Yard y The U-Men; para varios de ellos fue su primera aparición en un álbum. En este disco, los artistas tenían un "sonido agresivo", principalmente heavy que mezclaba los tempos lentos del heavy metal con la intensidad del hardcore. Como Jack Endino comentó: "La gente sólo decía, 'Bien, ¿qué clase de música es ésta? No es metal, no es punk, ¿qúe es? [...] la gente diría '¡Eureka!' estas bandas tienen algo en común".
+
+Más tarde en el mismo año, Bruce Pavitt lanzó en su discográfica Sub Pop el álbum recopilatorio Sub Pop 100, que contenía otros temas de los primeros grupos de grunge, así como el primer EP de Green River, Dry As a Bone. Uno de los primeros catálogos de Sub Pop describía el EP de Green River como "ultra-loose GRUNGE that destroyed the morals of a generation". Bruce Pavitt y Jonathan Poneman, también de Sub Pop, inspirados por otras escenas regionales que habían aparecido en la historia de la música, trabajaron para asegurar que su sello proyectara un "Sonido Seattle", reforzando un estilo similar en la producción y en el material gráfico de los álbumes. También procuraron tener un trabajo publicitario en forma, con miras a extender la popularidad de la escena. Un ejemplo de esto son las imágenes de los primeros conciertos de grunge, que pese a su escasa audiencia (algunos con asistencia menor a unas cuantas docenas de personas) creaban la impresión de que se trataban de eventos masivos gracias al trabajo de Charles Peterson, el fotógrafo de Sub Pop. Otras discográficas de la zona del Pacífico Noroeste se sumaron a Sub Pop para ayudar a la promoción del grunge, como la ya citada C/Z Records, Estrus Records, EMpTy Records y PopLlama Records.</blockquote>
+      </div>
+      
+    
+        <a href="#Ancla">Ir arriba</a>
+      <div class="card">
+         
+      <h2> Pérdida de popularidad</h2>	<hr/>
+		<br>
+       <div> <img src="img/CIBASS-Kurt-Cobain-en-Berlin.jpg" style="width:100%;"/></div>
+        <blockquote> Muchos fueron los factores que influyeron para que el grunge empezara a declinar en sus índices de popularidad. La aparición del post grunge durante la segunda mitad de la década de 1990 causó la progresiva suplantación del grunge por éste. El post grunge, con un estilo más suave y accesible, destronó a muchas bandas y trabajos de grunge. Aparecieron grupos más orientados a audiencias comerciales, con un sonido mucho más accesible, como Collective Soul, Silverchair o Bush, caracterizados por suavizar las guitarras distorsionadas del grunge con una producción mucho más pulida
+
+Inversamente a esto, otro subgénero del rock alternativo, el britpop, emerge como parte de una reacción en contra del dominio del grunge en el Reino Unido. En contraste con la dureza del grunge, el britpop es definido como "exuberante y lleno de juventud y deseo de reconocimiento". Grupos como Oasis o Blur se convirtieron en estandartes del estilo. El vocalista de Blur, Damon Albarn, llegó a admitir que su banda era "anti-grunge", mientras que Noel Gallagher, integrante de Oasis, criticó duramente el grunge, especialmente la canción "I Hate Myself and I Want to Die" de Nirvana, sentenciando que "todo esto del victimismo en la música era pura basura", refiriéndose inequívocamente al grunge.
+
+Muchos de los grandes grupos del grunge se separaron a mediados de los 90. Kurt Cobain comenzó a tener graves problemas con su adicción a las drogas, y a principios de 1994 entró en una clínica de rehabilitación, pero desapareció durante más de dos semanas hasta ser encontrado el 8 de abril muerto en su casa, lo que dio fin a la carrera de Nirvana. Ese mismo año Pearl Jam canceló su gira de verano en protesta contra la empresa Ticketmaster, que había encarecido los boletos de sus conciertos. Así, la banda comenzó un boicot contra la compañía que no sólo redujo la cantidad de conciertos organizados por dicha empresa, sino también los gestionados por muchas otras organizaciones similares bajo la negación del grupo, lo que hizo que no tuviese casi ningún concierto en los Estados Unidos durante tres años.
+</blockquote>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+        <a href="#Ancla">Ir arriba</a>
+      <div class="card">
+       
+      <h2>Resurgimiento de bandas grunge</h2>
+		  	<hr/>
+		<br>
+      
+        <div> <img src="img/public.jpg" style="width:100%;"/></div>
+      <div ></div>
+        <blockquote>Hasta 2015, Pearl Jam era de los pocos exitosos que sigue en activo. A la fecha habiendo editado diez álbumes, consiguiendo perdurar e influir en la opinión pública a pesar de su sostenida actitud anticomercial. Mudhoney sigue sacando discos con relativa frecuencia pero con mucho menos éxito que durante la época de popularidad del grunge.
+
+A partir del año 2006 se comienza a ver una reintegración de algunas de las bandas originales del movimiento. En dicho año los integrantes de Alice in Chains se reúnen, integrando al cantante William DuVall en sustitución del fallecido Layne Staley y lanzan nuevo álbum el 29 de septiembre de 2009 titulado Black Gives Way to Blue. Soundgarden se reúne también en 2009 lanzando nuevo material discográfico y reiniciando conciertos en festivales y por Estados Unidos y varios países más.  y muchos más</blockquote>
+      </div> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="dropdown">
+  <button class="dropbtn"> A c e r c a &nbsp; de &nbsp; m i </button>
+  <div class="dropdown-content" >
+    <a href="https://www.facebook.com/diego.p.slzr">Visita mi Perfil FB</a>
+    <a href="https://www.peru.travel/es-pe/">Conoce mi país</a>
+    <a href="http://www.ledzeppelin.com">Led Zepellin: Otro de mis grupos favoritos</a>
+  </div>
+</div>
+		
+      <h2 ><b></b></h2>
+		<br/>
+       <div> <img src="img/d1360_0.JPG" style="width:100%;"/></div>
+      
+		<br/>
+		<p> Mi nombre es Diego: </p>
+        <p>Soy estudiante de Administracion de Sistemas informáticos en Red, gran fan de la Música en todas sus variantes, con especial interés al Rock Aternativo.</p>
+		
+		<p>Me gusta tocar la guitarra en los momentos libres, poder realizar un cover de un grupo que te gusta es algo increible, pero aun lo es más si eres capaz de poder componer tu propia musica y letra </p>
+		
+		<p>Estos son mis inicios en lo que respecta al HTML Y CSS, es una gran objetivo poder aprender Lenguajes de Marcas, y aunque inicialmente  parace algo muy complejo, es sin lugar a dudas muy interensate.
+			
+			Aprovecho la ocasión para agradecer a los profesores y compañeros por su grata compañia.
+			Especialmente a mi profesora de LM: Gracias Isabel </p>
+            
+        <p>"Nunca dejes de Soñar"</p>
+    </div>
+
+	  <div class="card">
+    
+      
+
+
+			  <div class="card" align="justify" style="font-style: italic" >
+				  <img src="img/kurt-cobain.jpg" style="width:100%;"/>
+			  <h3>Frases de Kurt D. Cobain</h3>
+				  <p>"Prefiero ser odiado por lo que soy que ser amado por lo que no soy"</p>
+			   <p> “A veces por muy alto que pongas la música sólo puedes oírte a ti mismo”.</p>
+
+
+
+				  <p>“Paz, Amor y Empatía”.</p>
+
+
+
+				  <p>“Me gusta ver prejuicios ante la gente con prejuicios”.</p>
+
+
+
+
+
+						<p>“La vida del mundo es la paz de nuestra alma, sin una cerca de la otra es la misma muerte de nuestro propio ser que recoge lo que no hemos vivido hasta que nos damos cuenta lo demasiado tarde que ahora es”.</p>
+
+
+
+								  <p>“El auténtico amigo es el que sabe todo sobre ti y sigue siendo tu amigo”.</p>
+
+
+
+						<p>“Soy una persona más feliz de lo que mucha gente cree que soy”.
+						</p>
+
+
+						<p>“Todas mis letras han sido pedazos de poesía y los pedazos de poesía se toman de poemas que comúnmente no tiene significado en primer término”.
+						</p>
+
+
+						<p>“Bajo el efecto de las drogas no te importa nada, sólo quieres aislarte del mundo y conseguir una paz interior que no se consigue en estado normal”.
+						</p>
+
+
+						<p>“Las drogas destruyen tu memoria y tu propio respeto. No son buenas pero no pienso ir ahora predicando contra ellas”.
+						</p>
+
+
+						<p>“Mi memoria existe, mi recuerdo vivirá siempre y mi música en la gloria será la salvación del maldito infierno donde habitamos”.
+						</p>
+
+
+						<p>“A veces siento como si la gente quisiera que me muriera para que así se cumpliera la clásica historia del rock”.
+
+
+
+									  <p>“Desear ser otra persona es un desperdicio de la persona que eres”.</p>
+
+
+
+						<p>“Nadie muere virgen... La vida nos jode a todos”.
+
+
+
+							<p>“Si mi sonrisa mostrara el fondo de mi alma mucha gente al verme sonreír lloraría conmigo”
+									  </p>
+			</div>
+			
+			
+
+			 
+   </div>
+    
+<div class="card" align="justify" style="font-style: italic" >
+				  <img src="img/cornell_1.jpg" style="width:100%;"/>
+				 <h3>Frases de Chris Cornell</h3>	  
+	<p>“Tú me diste la vida, ahora enséñame cómo vivir ".</p>
+	<p>“Ahógate, si quieres te veré en el fondo ".</p>
+	<p>“Ser tú mismo es lo único que puedes hacer, ser tú mismo es todo lo que puedes hacer ".</p>
+	<p>“Lo que me gusta hacer es pintar cuadros con letras, la creación de imágenes llenas de color. Creo que es más de lo que el entretenimiento y la música deben ser".</p>
+	<p>“No fue un momento clave, cuando yo supe que quería dejar de fumar ".</p>
+	<p>“He estado bebiendo vida, mientras tú estás teniendo náuseas”.</p>
+	<p>“No creo que nadie sepa realmente por qué se suicidó Kurt. Todo el mundo sabía que Kurt tenía problemas de salud muy serios y que los había tenido durante años, mucho antes de que fuera famoso “.</p>
+	
+	  </div>
+	  
+	  
+			<div class="card"><img src="https://ugc.kn3.net/i/origin/http://25.media.tumblr.com/tumblr_maqjn4vdGZ1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	  			<div class="card"><img src="https://ugc.kn3.net/i/origin/http://24.media.tumblr.com/tumblr_m5mzfabs7a1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	  	  			<div class="card"><img src="https://ugc.kn3.net/i/origin/http://25.media.tumblr.com/tumblr_m32pl5LoOu1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+     
+	  
+	  <div class="card"><img src="https://ugc.kn3.net/i/origin/http://24.media.tumblr.com/tumblr_lzq1z6JVv41r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	   <div class="card"><img src="https://ugc.kn3.net/i/origin/http://25.media.tumblr.com/tumblr_lya19p45wd1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	  
+	  
+	   <div class="card"><img src="https://ugc.kn3.net/i/origin/http://25.media.tumblr.com/tumblr_ly2ork5QEM1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	 
+	   <div class="card"><img src="https://ugc.kn3.net/i/origin/http://24.media.tumblr.com/tumblr_lw7mvmSlIB1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	   <div class="card"><img src="https://ugc.kn3.net/i/origin/http://25.media.tumblr.com/tumblr_lu48lbsqrA1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	   <div class="card"><img src="https://ugc.kn3.net/i/origin/http://25.media.tumblr.com/tumblr_lu46sy8PIG1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	   <div class="card"><img src="https://ugc.kn3.net/i/origin/http://24.media.tumblr.com/tumblr_lu292wWx6H1r5g3yto1_500.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	   <div class="card"><img src="http://img.desmotivaciones.es/201404/sexo-bobobop-desmotivaciones-9.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	  
+	  
+	  
+	  
+	     <div class="card"><img src="http://jdcdn.wabisabiinvestme.netdna-cdn.com/wp-content/uploads/2017/05/Cornell.jpg" style="width:100%;"/>
+			  
+			</div>
+	     <div class="card"><img src="http://prensarock.com/wp-content/uploads/2017/05/918362874_7bccz-l.jpg" style="width:100%;"/>
+			  
+			</div>
+	  
+	     <div class="card"><img src="https://madremaya.files.wordpress.com/2015/05/wpid-amiga_m_a-hasta_siempre.jpg?w=620&zoom=2" style="width:100%;"/>
+			 
+			  <h2>R I P  </h2>	
+			 <p><center> Kurt Cobain</center></p>
+			 <p><center> Chris Cornell</center></p>
+			 <p><center> Chester Bennington</center></p>
+			  
+			</div>
+</div>
+
+
+
+
+
+<div class="footer">
+   
+		<!--     en caso que quisiera la imagen el footer usar, pero el footer esta pensado para poner otra informacion 
+
+		<img src="logohead.png" style="width:100%;"/>  --> 
+    
+	   <div>
+			
+		  		 	
+				<iframe width="100%" align="middle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.3665759233318!2d-3.5309676847833624!3d40.35639547937216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd423bbe6dcb2b51%3A0xd31e2e4c6669a422!2sIES+Europa!5e0!3m2!1ses!2ses!4v1519746438313" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+		  
+		  	</div>	
+	
+		<br/>
+	<p>site design / logo © 2018 Diego P. S. </p> 
+	<p>		  Todos los derechos reservados</p>
+
+    
+    
+    
+
+<a href="https://www.facebook.com/diego.p.slzr" target="_blank"><img alt="siguenos en facebook" height="40" src="http://3.bp.blogspot.com/-MQuocq7OzfU/UiXwUY81yQI/AAAAAAAAB0Q/h6-R_R2-buI/s1600/face.png" title="siguenos en facebook" width="40" /></a>
+    
+
+
+
+<a href="http://www.google.es/" target="_blank"><img alt="siguenos en Google+" height="40" src="http://1.bp.blogspot.com/-LzgEeObkOc0/UiX1TupB_KI/AAAAAAAAB5I/Ox_ZllZY90g/s1600/Google%252B+alt.png" title="siguenos en Google+" width="40" /></a>
+
+    
+    
+<a href="http://www.youtube.com" target="_blank"><img alt="Canal de youtube" height="40" src="http://1.bp.blogspot.com/-NEytJH3mFZ8/UidLG3fePdI/AAAAAAAAB_A/WbH7IJAh1qE/s1600/youtube2.png" title="Canal de youtube" width="40" /></a>
+
+
+<a href="https://www.20minutos.es/rss/" target="_blank"><img alt="Rss feed" height="40" src="http://2.bp.blogspot.com/-SyPXIJWrlPE/UiX1UHO5MnI/AAAAAAAAB5Y/L7BettwRqHA/s1600/RSS+Feed.png" title="Rss feed" width="40" /></a>
+
+
+
+    
+
+    
+    
+    <a href="URL-Hi5!" target="_blank"><img alt="sígueme en Hi5!" height="40" src="http://2.bp.blogspot.com/-uPHzVSiIxg4/UioHujwJ6tI/AAAAAAAACHo/y2J-j5BZlgs/s1600/hi5.png" title="sígueme en Hi5!" width="40" /></a>
+
+    <a href="URL-Skype" target="_blank"><img alt="sígueme en Skype" height="40" src="http://4.bp.blogspot.com/-OQs-ZVJACtE/UieBsy-ci7I/AAAAAAAACEA/52_T5Gq9bnQ/s1600/skype2.png" title="sígueme en Skype" width="40" /></a>
+
+    
+    
+</div>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+/*para formulario */
+
+			body {
+			  
+			  width: 60%;
+			  margin: 0 auto;
+                background-color: darkolivegreen;
+                background-image: url(img/Concerts-in-Philadelphia.jpg);       
+
+                /* La imagen de fondo se reescala cuando se cambia el ancho de ventana del navegador */
+                background-size: cover;
+                 
+                /* Nos aseguramos que la imagen de fondo este centrada vertical y    horizontalmente en todo momento */
+                background-position: center center;
+                
+                
+                
+			    color: aliceblue;
+                font-family:Lucida Console;
+                
+                font-weight:bold;
+                min-height: 100%;
+                background-repeat: no-repeat;
+                
+                /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando la altura del contenido supere la altura de la imagen. */
+               
+                background-attachment: fixed;
+
+
+            }
+			
+			fieldset {
+			  margin: 1em auto;
+                background-color: transparent;
+          
+                
+            }
+
+			legend {
+			  font-size: ;
+			  font-weight: bold;
+			  text-transform: uppercase;
+            text-align: center;
+			}
+			
+			input {
+				margin: 10px;
+			}
+/*para formulario */

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head> 
+		<title>Galeria</title> 
+		<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" href="">
+	
+	<style>
+	
+		body {
+			
+			background-color:darkslategray;
+			margin: 0;
+			font-family: monospace;
+		}
+		
+		h1 {
+			color:azure;
+			text-align: center;
+			
+		}
+		
+/* estilos de la galeria */
+		.galeria {
+			width: 90%;
+			margin:auto;
+			list-style: none;
+			padding: 20px;
+			box-sizing: border-box;
+			
+			display: flex; 
+			flex-wrap: wrap;  /*al llegar al ancho del a ventana, los elemntos bajan */
+			justify-content: space-around;
+		}
+		.galeria li {
+			margin: 5px;
+		}
+		
+		.galeria img {
+			width: 250px;
+			height: 200px;
+			
+		}
+
+		/* estilos del modal */
+		
+		.modal{
+			display: none;
+		}
+		
+		.modal:target{
+			display: block;
+			position:fixed;
+			background: rgba(0,0,0,0.8); /* transparencia 0.8 */
+ 			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.modal h3{ 
+			color: #ffffff;
+			font-size: 30px;
+			text-align: center;
+			margin: 15px 0;      /*el 0 es a los costados */
+		}
+		
+		.imagen{
+			width: 100%;
+			height: 50%;
+			display: flex;
+			justify-content: center; /*se alinea de horizontalmente  por el FLEX  */
+			align-items: center;   /* centrado verticalmnete*/
+			
+		}
+		
+		.imagen a{
+			color: #fff;
+			font-size: 40px;
+			text-decoration: none;
+			margin: 0 10px;
+				
+		}
+		
+		/* solo afectara a la segunda etiqueta a  */
+		.imagen a:nth-child(2) {
+			margin: 0;
+			height: 100%;
+			flex-shrink: 2; /* es la porporcion de reducciom, al reducir se adapta  */	
+		}
+		
+		
+		.imagen img{
+			width: 500px;
+			height: 100%;
+			max-width: 100%;   /* para que la img se adapte al reducir siempre aparezca su ancho */
+			border: 7px solid #fff;
+			box-sizing: border-box;
+		}
+		
+		.cerrar{
+			display: block;
+			background: #fff;
+			width: 25px;
+			height: 25px;
+			margin: 15px auto;
+			text-align: center;
+			text-decoration: none;
+			font-size: 25px;
+			color: #000;
+			padding: 5px;
+			border-radius: 50%;
+			line-height: 25px;
+			
+				
+		}
+			
+		
+		
+	</style>
+	
+</head>
+
+	
+<body>
+	
+	<h1>Galeria de Imágenes: Grunge</h1>
+	
+	<ul class="galeria">
+		<li><a href="#img1"><img src="img/kurtoverhand.jpg" ></a></li>
+		<li><a href="#img2"><img src="img/concert.jpg"></a></li>
+		<li><a href="#img3"><img src="img/Concerts-in-Philadelphia.jpg"></a></li>
+		<li><a href="#img4"><img src="img/jump.jpg"></a></li>
+		
+		<li><a href="#img5"><img src="img/public.jpg"></a></li>
+		<li><a href="#img6"><img src="img/nirvanafrontal.jpg"></a></li>
+		<li><a href="#img7"><img src="img/kurtoverpeople.jpg"></a></li>
+		<li><a href="#img8"><img src="img/jumpin%20guitarrr.jpg"></a></li>
+		
+	</ul>
+	
+	
+	<div class="modal" id="img1">
+		<h3>Imagen 1</h3>
+		
+		<div class="imagen">
+			<a href="#img4">&#60;</a>
+			<a href="#img2"><img src="img/kurtoverhand.jpg"></a>
+			<a href="#img2">></a>
+		</div>
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+	<div class="modal" id="img2">
+		<h3>Imagen 2</h3>
+		<div class="imagen">
+			<a href="#img1">&#60;</a>
+			<a href="#img3"><img src="img/concert.jpg"></a>
+			<a href="#img3">></a>  
+		</div>
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+	<div class="modal" id="img3">
+		<h3>Imagen 3</h3>
+		<div class="imagen">
+			<a href="#img2">&#60;</a>
+			<a href="#img4"><img src="img/Concerts-in-Philadelphia.jpg"></a>
+			<a href="#img4">></a>
+		</div>
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+	
+	<div class="modal" id="img4">
+		<h3>Imagen 4</h3>
+		<div class="imagen">
+			<a href="#img3">&#60;</a>
+			<a href="#img5"><img src="img/jump.jpg"></a>
+			<a href="#img5">></a>
+		</div>
+		<a class="cerrar" href="">X</a> 
+		<!--/* al no haber target, al darle a X se cierra y se borra el hush # el vinculo de la barra de direcciones y nos lleva a .modal{display:none} -->
+	</div>
+	
+	<div class="modal" id="img5">
+		<h3>Imagen 5</h3>
+		<div class="imagen">
+			<a href="#img4">&#60;</a>
+			<a href="#img6"><img src="img/public.jpg"></a>
+			<a href="#img6">></a>
+		</div>
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+		<div class="modal" id="img6">
+		<h3>Imagen 6</h3>
+		<div class="imagen">
+			<a href="#img5">&#60;</a>
+			<a href="#img7"><img src="img/nirvanafrontal.jpg"></a>
+			<a href="#img7">></a>
+		</div>
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+		<div class="modal" id="img7">
+		<h3>Imagen 7</h3>
+		<div class="imagen">
+			<a href="#img6">&#60;</a>
+			<a href="#img8"><img src="img/kurtoverpeople.jpg"></a>
+			<a href="#img8">></a>
+		</div>
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+	
+		<div class="modal" id="img8">
+		<h3>Imagen 8</h3>
+		<div class="imagen">
+			<a href="#img7">&#60;</a>
+			<a href="#img1"><img src="img/jumpin%20guitarrr.jpg"></a>
+			<a href="#img1">></a>
+		</div>
+				
+		<a class="cerrar" href="">X</a>
+	</div>
+	
+	
+	  
+        <br/>
+        <br/>
+        <div align="center">
+                        <a href="GRUNGEMAIN.HTML" >
+                        <input type="button" value="Volver a la Página Principal" style="cursor: pointer"></a>
+ 
+                <br/>
+                <br/>
+             
+                <br/>
+            
+        </div>
+</body>
+	
+	
+</html>
+
+
+
+<!--
+<frameset cols="25%,*,25%">
+  <frame src="frame_a.htm">
+  <frame src="frame_b.htm">
+  <frame src="frame_c.htm">
+</frameset>
+-->
+
+
