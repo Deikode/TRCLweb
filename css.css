@@ -16,14 +16,15 @@ body {
 
 
 
-    /* Header/Blog Title */
-header, footer {
+/* Header/Blog Title */
+header,
+footer {
     padding: 1em;
     color: white;
     background-color: black;
     clear: left;
     text-align: center;
-    
+
 
 }
 
@@ -69,29 +70,31 @@ header, footer {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
-     
+
 }
-    
-.imgrock1 {background-color: #aaa;
+
+.imgrock1 {
+    background-color: #aaa;
     width: 100%;
     padding: 20px;
-     background-image: url(img/nirvanafrontal.jpg);
-    
-    }
-    
-.imgrock2 {background-color: #aaa;
+    background-image: url(img/nirvanafrontal.jpg);
+
+}
+
+.imgrock2 {
+    background-color: #aaa;
     width: 100%;
     padding: 20px;
-     background-image: url(img/concert.jpg);
-    
-    }
-    
+    background-image: url(img/concert.jpg);
+
+}
+
 
 /* Add a card effect for articles */
 .card {
-     background-color: white;
-     padding: 20px;
-     margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 /* Clear floats after the columns */
@@ -104,7 +107,7 @@ header, footer {
 /* Footer */
 .footer {
     padding: 20px;
-    
+
     text-align: center;
     background: #ddd;
     margin-top: 20px;
@@ -112,7 +115,9 @@ header, footer {
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
+
+    .leftcolumn,
+    .rightcolumn {
         width: 100%;
         padding: 0;
     }
@@ -122,19 +127,44 @@ header, footer {
 @media (max-width: 400px) {
     .topnav a {
         float: none;
-        width:100%;
+        width: 100%;
     }
 }
 
-    
-    
-.white
-    {
-        color:forestgreen;
-    }
-    
-h1
-    {color:darkmagenta;
-		font-size: 90px;
-    }
-    
+
+
+.white {
+    color: forestgreen;
+}
+
+h1 {
+    color: darkmagenta;
+    font-size: 90px;
+}
+
+blockquote {
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+p {
+    text-indent: 50px;
+    text-align: inherit;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4CAF50;
+}
